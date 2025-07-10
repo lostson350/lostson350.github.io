@@ -78,6 +78,32 @@
       margin: 10px 0;
       border-radius: 10px;
     }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .dark-mode .service-card {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #007acc;
+    }
     .contact-btn {
       display: inline-block;
       background: #007acc;
@@ -141,6 +167,28 @@
     <div class="section about">
       <h2>About Me</h2>
       <p>I’m LostSon, a digital storyteller known for emotional quotes, relatable videos, and creative visuals. I write about heartbreak, love, healing — and help promote upcoming music talents and brands through TikTok. Welcome to my world of feeling, expression, and creativity.</p>
+    </div>
+
+    <div class="section">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Quote Writing</h3>
+          <p>Custom emotional, romantic, and heartbreak quotes tailored to your audience or brand.</p>
+        </div>
+        <div class="service-card">
+          <h3>Promo Strategy</h3>
+          <p>Boost music, products, or personal brands through engaging TikTok visuals and caption hooks.</p>
+        </div>
+        <div class="service-card">
+          <h3>Storytelling Visuals</h3>
+          <p>Turn emotions into visuals with layered text, music, and cinematic edits.</p>
+        </div>
+        <div class="service-card">
+          <h3>Content Collab</h3>
+          <p>Team up for digital series, themed posts, or cross-platform storytelling projects.</p>
+        </div>
+      </div>
     </div>
 
     <div class="section">

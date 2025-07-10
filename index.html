@@ -5,27 +5,24 @@
   <meta charset="UTF-8">
   <title>Lostson350 | Digital Storyteller</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
       color: #111;
       transition: background 0.3s ease, color 0.3s ease;
     }
     .dark-mode {
-      background-color: #111;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
       color: #fff;
     }
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       padding: 40px 20px;
       text-align: center;
-    }
-    .hero {
-      margin-bottom: 40px;
-      animation: fadeIn 1.5s ease-in-out;
     }
     .hero img {
       width: 140px;
@@ -41,23 +38,14 @@
     .typing {
       font-size: 18px;
       color: #007acc;
-      height: 24px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #007acc;
-      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+      margin-bottom: 20px;
+      font-style: italic;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #007acc }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .quote-slider {
+      font-size: 20px;
+      font-style: italic;
+      margin: 30px 0;
+      min-height: 60px;
     }
     .socials a {
       margin: 0 10px;
@@ -68,29 +56,18 @@
       padding: 8px 15px;
       border-radius: 8px;
       display: inline-block;
-      transition: background 0.3s;
     }
-    .socials a:hover {
-      background: #333;
-    }
-    .section {
+    .stats, .section, .testimonials, .articles {
       margin: 40px 0;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .about, .testimonials, .articles {
-      font-size: 16px;
-      line-height: 1.6;
     }
     .stats {
       background: #00ffcc;
       color: #000;
       padding: 20px;
       border-radius: 12px;
-      margin: 30px 0;
     }
     .stats p {
       font-size: 18px;
-      margin: 5px 0;
     }
     .articles a {
       display: block;
@@ -111,10 +88,13 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #aaa;
+    iframe {
+      width: 100%;
+      max-width: 400px;
+      height: 500px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: none;
     }
     .toggle-btn {
       position: absolute;
@@ -128,6 +108,11 @@
       cursor: pointer;
       border-radius: 5px;
     }
+    .footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #444;
+    }
   </style>
 </head>
 <body>
@@ -136,14 +121,16 @@
   <div class="container">
     <div class="hero">
       <img src="97C33458-CFD0-405D-A3B2-54CECF608A32.jpeg" alt="Lostson350">
-      <h1>Lostson350</h1>
+      <h1>LostSon</h1>
       <div class="typing">Digital Storyteller • Quote Writer • Promo Strategist</div>
       <div class="socials">
-        <a href="https://www.tiktok.com/@lostson350?_t=ZS-8xuPICPFiqo&_r=1" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com/lostson350?igsh=MTgwNXVnMHp6emdyZQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@lostson350" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/lostson350" target="_blank">Instagram</a>
         <a href="mailto:tgod0310@gmail.com">Email Me</a>
       </div>
     </div>
+
+    <div class="quote-slider" id="quote-slider">"Sometimes silence is the loudest cry."</div>
 
     <div class="stats">
       <p><strong>Followers:</strong> 10K+ on TikTok</p>
@@ -153,13 +140,12 @@
 
     <div class="section about">
       <h2>About Me</h2>
-      <p>I’m Lostson350, a digital storyteller known for emotional quotes, relatable videos, and creative visuals. I write about heartbreak, love, healing — and help promote upcoming music talents and brands through TikTok. Welcome to my world of feeling, expression, and creativity.</p>
+      <p>I’m LostSon, a digital storyteller known for emotional quotes, relatable videos, and creative visuals. I write about heartbreak, love, healing — and help promote upcoming music talents and brands through TikTok. Welcome to my world of feeling, expression, and creativity.</p>
     </div>
 
-    <div class="section testimonials">
-      <h2>What People Say</h2>
-      <p>"Lostson350’s quotes always hit home. His content has changed the way I view life!" — TikTok Follower</p>
-      <p>"A game-changer in emotional storytelling. Keep spreading positivity!" — Music Artist</p>
+    <div class="section">
+      <h2>Watch My TikTok</h2>
+      <iframe src="https://www.tiktok.com/embed/v2/7360971837343802651"></iframe>
     </div>
 
     <div class="section articles">
@@ -173,14 +159,22 @@
     <a class="contact-btn" href="mailto:tgod0310@gmail.com">Work With Me</a>
 
     <div class="footer">
-      &copy; 2025 Lostson350 — All rights reserved.
+      &copy; 2025 LostSon — All rights reserved.
     </div>
   </div>
 
   <script>
-    document.querySelector('.toggle-btn').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
+    const quotes = [
+      "Sometimes silence is the loudest cry.",
+      "Healing starts when you stop pretending you’re okay.",
+      "Many people end relationships that were supposed to last because they didn't understand the different stages of a relationship...",
+      "Nobody watches you more than a partner who left you. They want to confirm that leaving you wasn't a mistake. So don't fail yourself."
+    ];
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % quotes.length;
+      document.getElementById("quote-slider").innerText = quotes[current];
+    }, 4000);
   </script>
 </body>
 </html>

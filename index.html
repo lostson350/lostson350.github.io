@@ -1,15 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lostson350 | TikTok Creator Page</title>
+    <title>Lostson350 | Verified TikTok Creator Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #ffffff, #f2f2f2);
+            background-color: #f4f4f4;
             color: #111;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .dark-mode {
+            background-color: #111;
+            color: #fff;
         }
         .container {
             max-width: 800px;
@@ -67,6 +73,26 @@
         .articles a:hover {
             background: #333;
         }
+        .stats {
+            background: #00ffcc;
+            color: #000;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .stats p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .testimonials {
+            background: #eeeeee;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .testimonials p {
+            font-style: italic;
+        }
         .contact-btn {
             display: inline-block;
             background: #007acc;
@@ -86,10 +112,23 @@
             font-size: 14px;
             color: #aaa;
         }
+        .toggle-btn {
+            padding: 10px 20px;
+            background-color: #00ffcc;
+            color: #111;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Dark/Light Mode Toggle -->
+        <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark/Light Mode</button>
+
         <div class="hero">
             <img src="8AC0A51F-7641-4462-BB00-CEC24D5C9784.jpeg" alt="Lostson350">
             <h1>Lostson350</h1>
@@ -101,13 +140,29 @@
             </div>
         </div>
 
+        <!-- Stats Section -->
+        <div class="stats">
+            <p><strong>Followers:</strong> 10K+ on TikTok</p>
+            <p><strong>Video Views:</strong> 1M+</p>
+            <p><strong>Articles Published:</strong> 20+</p>
+        </div>
+
+        <!-- About Section -->
         <div class="section about">
             <h2>About Me</h2>
             <p>I’m Lostson350, a digital storyteller known for emotional quotes, relatable videos, 
-and creative visuals. I write about heartbreak, love, healing — and help promote upcoming music talents 
-and brands through TikTok. Welcome to my world of feeling, expression, and creativity.</p>
+               and creative visuals. I write about heartbreak, love, healing — and help promote upcoming music talents 
+               and brands through TikTok. Welcome to my world of feeling, expression, and creativity.</p>
         </div>
 
+        <!-- Testimonials Section -->
+        <div class="section testimonials">
+            <h2>What People Say</h2>
+            <p>"Lostson350’s quotes always hit home. His content has changed the way I view life!" — TikTok Follower</p>
+            <p>"A game-changer in emotional storytelling. Keep spreading positivity!" — Music Artist</p>
+        </div>
+
+        <!-- Featured Articles -->
         <div class="section articles">
             <h2>Featured Articles</h2>
             <a href="https://www.nairaland.com/8468817/mark-thankgod-nigerian-tiktok-creator#136016677" target="_blank">Nairaland: Meet the Creator</a>
@@ -116,11 +171,19 @@ and brands through TikTok. Welcome to my world of feeling, expression, and creat
             <a href="https://www.blogger.com/u/4/blog/post/edit/9116423077697262942/3590805475164440871" target="_blank">Blogger: The Fitness Underdog</a>
         </div>
 
+        <!-- Work With Me Section -->
         <a class="contact-btn" href="mailto:tgod0310@gmail.com">Work With Me</a>
 
         <div class="footer">
             &copy; 2025 Lostson350 — All rights reserved.
         </div>
     </div>
+
+    <script>
+        // Dark mode toggle script
+        document.querySelector('.toggle-btn').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
